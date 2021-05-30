@@ -11,14 +11,14 @@ other information that should be provided before the modules are installed.
 
 |Python package| |GitHub issues| |Documentation Status| |GitHub contributors|
 
-.. |Python package| image:: https://github.com/vroncevic/gen_efi_app/workflows/Python%20package%20gen_efi_app/badge.svg
-   :target: https://github.com/vroncevic/gen_efi_app/workflows/Python%20package%20gen_efi_app/badge.svg?branch=master
+.. |Python package| image:: https://github.com/electux/gen_efi_app/workflows/Python%20package%20gen_efi_app/badge.svg
+   :target: https://github.com/electux/gen_efi_app/workflows/Python%20package%20gen_efi_app/badge.svg?branch=master
 
-.. |GitHub issues| image:: https://img.shields.io/github/issues/vroncevic/gen_efi_app.svg
-   :target: https://github.com/vroncevic/gen_efi_app/issues
+.. |GitHub issues| image:: https://img.shields.io/github/issues/electux/gen_efi_app.svg
+   :target: https://github.com/electux/gen_efi_app/issues
 
-.. |GitHub contributors| image:: https://img.shields.io/github/contributors/vroncevic/gen_efi_app.svg
-   :target: https://github.com/vroncevic/gen_efi_app/graphs/contributors
+.. |GitHub contributors| image:: https://img.shields.io/github/contributors/electux/gen_efi_app.svg
+   :target: https://github.com/electux/gen_efi_app/graphs/contributors
 
 .. |Documentation Status| image:: https://readthedocs.org/projects/gen_efi_app/badge/?version=latest
    :target: https://gen_efi_app.readthedocs.io/projects/gen_efi_app/en/latest/?badge=latest
@@ -35,15 +35,15 @@ Installation
 
 |Install Python2 Package| |Install Python3 Package|
 
-.. |Install Python2 Package| image:: https://github.com/vroncevic/gen_efi_app/workflows/Install%20Python2%20Package%20gen_efi_app/badge.svg
-   :target: https://github.com/vroncevic/gen_efi_app/workflows/Install%20Python2%20Package%20gen_efi_app/badge.svg?branch=master
+.. |Install Python2 Package| image:: https://github.com/electux/gen_efi_app/workflows/Install%20Python2%20Package%20gen_efi_app/badge.svg
+   :target: https://github.com/electux/gen_efi_app/workflows/Install%20Python2%20Package%20gen_efi_app/badge.svg?branch=master
 
-.. |Install Python3 Package| image:: https://github.com/vroncevic/gen_efi_app/workflows/Install%20Python3%20Package%20gen_efi_app/badge.svg
-   :target: https://github.com/vroncevic/gen_efi_app/workflows/Install%20Python3%20Package%20gen_efi_app/badge.svg?branch=master
+.. |Install Python3 Package| image:: https://github.com/electux/gen_efi_app/workflows/Install%20Python3%20Package%20gen_efi_app/badge.svg
+   :target: https://github.com/electux/gen_efi_app/workflows/Install%20Python3%20Package%20gen_efi_app/badge.svg?branch=master
 
 Navigate to release `page`_ download and extract release archive.
 
-.. _page: https://github.com/vroncevic/gen_efi_app/releases
+.. _page: https://github.com/electux/gen_efi_app/releases
 
 To install this set of modules type the following:
 
@@ -73,8 +73,8 @@ You can use Docker to create image/container, or You can use pip to install:
 
 |GitHub docker checker|
 
-.. |GitHub docker checker| image:: https://github.com/vroncevic/gen_efi_app/workflows/gen_efi_app%20docker%20checker/badge.svg
-   :target: https://github.com/vroncevic/gen_efi_app/actions?query=workflow%3A%22gen_efi_app+docker+checker%22
+.. |GitHub docker checker| image:: https://github.com/electux/gen_efi_app/workflows/gen_efi_app%20docker%20checker/badge.svg
+   :target: https://github.com/electux/gen_efi_app/actions?query=workflow%3A%22gen_efi_app+docker+checker%22
 
 Dependencies
 -------------
@@ -129,7 +129,7 @@ Copyright and licence
 .. |License: Apache 2.0| image:: https://img.shields.io/badge/License-Apache%202.0-blue.svg
    :target: https://opensource.org/licenses/Apache-2.0
 
-Copyright (C) 2020 by `vroncevic.github.io/gen_efi_app <https://vroncevic.github.io/gen_efi_app>`_
+Copyright (C) 2020 by `electux.github.io/gen_efi_app <https://electux.github.io/gen_efi_app>`_
 
 **gen_efi_app** is free software; you can redistribute it and/or modify
 it under the same terms as Python itself, either Python version 2.x/3.x or,
@@ -139,7 +139,7 @@ Lets help and support PSF.
 
 |Python Software Foundation|
 
-.. |Python Software Foundation| image:: https://raw.githubusercontent.com/vroncevic/gen_efi_app/dev/docs/psf-logo-alpha.png
+.. |Python Software Foundation| image:: https://raw.githubusercontent.com/electux/gen_efi_app/dev/docs/psf-logo-alpha.png
    :target: https://www.python.org/psf/
 
 |Donate|
