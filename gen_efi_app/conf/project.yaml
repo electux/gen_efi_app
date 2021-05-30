@@ -1,0 +1,15 @@
+templates:
+  - cflags.template
+  - ldflags.template
+  - main.template
+  - makefile.template
+  - objects.template
+  - ocflags.template
+
+modules:
+  - cflags.mk
+  - ldflags.mk
+  - main.c
+  - Makefile
+  - objects.mk
+  - ocflags.mk
