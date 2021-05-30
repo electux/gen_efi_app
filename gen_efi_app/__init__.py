@@ -16,7 +16,7 @@
      You should have received a copy of the GNU General Public License along
      with this program. If not, see <http://www.gnu.org/licenses/>.
  Info
-     Defined class Gen_efi_app with attribute(s) and method(s).
+     Defined class GenEfiApp with attribute(s) and method(s).
      Load a base info, create an CLI interface and run operation(s).
 '''
 
@@ -25,7 +25,7 @@ from os.path import exists
 
 try:
     from pathlib import Path
-    from gen_efi_app.pro import GenGen_efi_app
+    from gen_efi_app.pro import GenEfi
     from ats_utilities.logging import ATSLogger
     from ats_utilities.cli.cfg_cli import CfgCLI
     from ats_utilities.cooperative import CooperativeMeta
@@ -46,9 +46,9 @@ __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
 
 
-class Gen_efi_app(CfgCLI):
+class GenEfiApp(CfgCLI):
     '''
-        Defined class Gen_efi_app with attribute(s) and method(s).
+        Defined class GenEfiApp with attribute(s) and method(s).
         Load a base info, create an CLI interface and run operation(s).
         It defines:
 
@@ -62,7 +62,7 @@ class Gen_efi_app(CfgCLI):
             :methods:
                 | __init__ - initial constructor.
                 | process - process and run operation.
-                | __str__ - dunder method for Gen_efi_app.
+                | __str__ - dunder method for GenEfiApp.
     '''
 
     __metaclass__ = CooperativeMeta
@@ -80,26 +80,26 @@ class Gen_efi_app(CfgCLI):
             :exceptions: None
         '''
         current_dir = Path(__file__).resolve().parent
-        base_info = '{0}{1}'.format(current_dir, Gen_efi_app.CONFIG)
+        base_info = '{0}{1}'.format(current_dir, GenEfiApp.CONFIG)
         CfgCLI.__init__(self, base_info, verbose=verbose)
-        verbose_message(Gen_efi_app.GEN_VERBOSE, verbose, 'init tool info')
+        verbose_message(GenEfiApp.GEN_VERBOSE, verbose, 'init tool info')
         self.logger = ATSLogger(
-            Gen_efi_app.GEN_VERBOSE.lower(),
-            '{0}{1}'.format(current_dir, Gen_efi_app.LOG),
+            GenEfiApp.GEN_VERBOSE.lower(),
+            '{0}{1}'.format(current_dir, GenEfiApp.LOG),
             verbose=verbose
         )
         if self.tool_operational:
             self.add_new_option(
-                Gen_efi_app.OPS[0], Gen_efi_app.OPS[1],
+                GenEfiApp.OPS[0], GenEfiApp.OPS[1],
                 dest='gen', help='generate option'
             )
             self.add_new_option(
-                Gen_efi_app.OPS[2], Gen_efi_app.OPS[3],
+                GenEfiApp.OPS[2], GenEfiApp.OPS[3],
                 action='store_true', default=False,
                 help='activate verbose mode for generation'
             )
             self.add_new_option(
-                Gen_efi_app.OPS[4], action='version', version=__version__
+                GenEfiApp.OPS[4], action='version', version=__version__
             )
 
     def process(self, verbose=False):
@@ -117,7 +117,7 @@ class Gen_efi_app(CfgCLI):
             num_of_args_sys = len(sys.argv)
             if num_of_args_sys > 1:
                 operation = sys.argv[1]
-                if operation not in Gen_efi_app.OPS:
+                if operation not in GenEfiApp.OPS:
                     sys.argv.append('-h')
             else:
                 sys.argv.append('-h')
@@ -127,46 +127,46 @@ class Gen_efi_app(CfgCLI):
                 if bool(getattr(args, 'gen')):
                     print(
                         '{0} {1} [{2}]'.format(
-                            '[{0}]'.format(Gen_efi_app.GEN_VERBOSE.lower()),
+                            '[{0}]'.format(GenEfiApp.GEN_VERBOSE.lower()),
                             'generating', getattr(args, 'gen')
                         )
                     )
-                    generator = GenGen_efi_app(verbose=verbose)
-                    status = generator.gen_setup(
+                    generator = GenEfi(verbose=verbose)
+                    status = generator.gen_project(
                         getattr(args, 'gen'), verbose
                     )
                     if status:
-                        success_message(Gen_efi_app.GEN_VERBOSE, 'done\n')
+                        success_message(GenEfiApp.GEN_VERBOSE, 'done\n')
                         self.logger.write_log(
                             '{0} {1} done'.format(
-                                'generating tool/gen',
+                                'generating EFI project',
                                 getattr(args, 'gen')
                             ), ATSLogger.ATS_INFO
                         )
                     else:
                         error_message(
-                            Gen_efi_app.GEN_VERBOSE, 'generation failed'
+                            GenEfiApp.GEN_VERBOSE, 'generation failed'
                         )
                         self.logger.write_log(
                             'generation failed', ATSLogger.ATS_ERROR
                         )
                 else:
                     error_message(
-                        Gen_efi_app.GEN_VERBOSE, 'provide project name'
+                        GenEfiApp.GEN_VERBOSE, 'provide project name'
                     )
                     self.logger.write_log(
                         'provide project name', ATSLogger.ATS_ERROR
                     )
             else:
                 error_message(
-                    Gen_efi_app.GEN_VERBOSE, 'project already exist'
+                    GenEfiApp.GEN_VERBOSE, 'project already exist'
                 )
                 self.logger.write_log(
                     'project already exist', ATSLogger.ATS_ERROR
                 )
         else:
             error_message(
-                Gen_efi_app.GEN_VERBOSE, 'tool is not operational'
+                GenEfiApp.GEN_VERBOSE, 'tool is not operational'
             )
             self.logger.write_log(
                 'tool is not operational', ATSLogger.ATS_ERROR
@@ -175,7 +175,7 @@ class Gen_efi_app(CfgCLI):
 
     def __str__(self):
         '''
-            Dunder method for Gen_efi_app.
+            Dunder method for GenEfiApp.
 
             :return: object in a human-readable format.
             :rtype: <str>
