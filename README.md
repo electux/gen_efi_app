@@ -10,7 +10,7 @@ The README is used to introduce the modules and provide instructions on
 how to install the modules, any machine dependencies it may have and any
 other information that should be provided before the modules are installed.
 
-![Python package](https://github.com/electux/gen_efi_app/workflows/Python%20package%20gen_efi_app/badge.svg?branch=master) [![GitHub issues open](https://img.shields.io/github/issues/electux/gen_efi_app.svg)](https://github.com/electux/gen_efi_app/issues) [![GitHub contributors](https://img.shields.io/github/contributors/electux/gen_efi_app.svg)](https://github.com/electux/gen_efi_app/graphs/contributors)
+![Python package](https://github.com/electux/gen_efi_app/workflows/Python%20package%20gen_efi_app/badge.svg?branch=main) [![GitHub issues open](https://img.shields.io/github/issues/electux/gen_efi_app.svg)](https://github.com/electux/gen_efi_app/issues) [![GitHub contributors](https://img.shields.io/github/contributors/electux/gen_efi_app.svg)](https://github.com/electux/gen_efi_app/graphs/contributors)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -29,7 +29,7 @@ other information that should be provided before the modules are installed.
 
 ### Installation
 
-![Install Python2 Package](https://github.com/electux/gen_efi_app/workflows/Install%20Python2%20Package%20gen_efi_app/badge.svg?branch=master) ![Install Python3 Package](https://github.com/electux/gen_efi_app/workflows/Install%20Python3%20Package%20gen_efi_app/badge.svg?branch=master)
+![Install Python2 Package](https://github.com/electux/gen_efi_app/workflows/Install%20Python2%20Package%20gen_efi_app/badge.svg?branch=main) ![Install Python3 Package](https://github.com/electux/gen_efi_app/workflows/Install%20Python3%20Package%20gen_efi_app/badge.svg?branch=main)
 
 Currently there are three ways to install tool:
 * Install process based on pip
