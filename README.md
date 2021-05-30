@@ -1,4 +1,4 @@
-<img align="right" src="https://raw.githubusercontent.com/vroncevic/gen_efi_app/dev/docs/gen_efi_app_logo.png" width="25%">
+<img align="right" src="https://github.com/electux/gen_efi_app/blob/dev/docs/gen_efi_app_logo.png" width="25%">
 
 # Create EFI application
 
@@ -10,7 +10,7 @@ The README is used to introduce the modules and provide instructions on
 how to install the modules, any machine dependencies it may have and any
 other information that should be provided before the modules are installed.
 
-![Python package](https://github.com/vroncevic/gen_efi_app/workflows/Python%20package%20gen_efi_app/badge.svg?branch=master) [![GitHub issues open](https://img.shields.io/github/issues/vroncevic/gen_efi_app.svg)](https://github.com/vroncevic/gen_efi_app/issues) [![GitHub contributors](https://img.shields.io/github/contributors/vroncevic/gen_efi_app.svg)](https://github.com/vroncevic/gen_efi_app/graphs/contributors)
+![Python package](https://github.com/electux/gen_efi_app/workflows/Python%20package%20gen_efi_app/badge.svg?branch=master) [![GitHub issues open](https://img.shields.io/github/issues/electux/gen_efi_app.svg)](https://github.com/electux/gen_efi_app/issues) [![GitHub contributors](https://img.shields.io/github/contributors/electux/gen_efi_app.svg)](https://github.com/electux/gen_efi_app/graphs/contributors)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -29,7 +29,7 @@ other information that should be provided before the modules are installed.
 
 ### Installation
 
-![Install Python2 Package](https://github.com/vroncevic/gen_efi_app/workflows/Install%20Python2%20Package%20gen_efi_app/badge.svg?branch=master) ![Install Python3 Package](https://github.com/vroncevic/gen_efi_app/workflows/Install%20Python3%20Package%20gen_efi_app/badge.svg?branch=master)
+![Install Python2 Package](https://github.com/electux/gen_efi_app/workflows/Install%20Python2%20Package%20gen_efi_app/badge.svg?branch=master) ![Install Python3 Package](https://github.com/electux/gen_efi_app/workflows/Install%20Python3%20Package%20gen_efi_app/badge.svg?branch=master)
 
 Currently there are three ways to install tool:
 * Install process based on pip
@@ -50,7 +50,7 @@ pip3 install gen_efi_app
 
 ##### Install using setuptools
 
-Navigate to **[release page](https://github.com/vroncevic/gen_efi_app/releases)** download and extract release archive.
+Navigate to **[release page](https://github.com/electux/gen_efi_app/releases)** download and extract release archive.
 
 To install modules, locate and run setup.py, type the following:
 ```
@@ -72,13 +72,13 @@ python3 setup.py install_data
 
 You can use Dockerfile to create image/container.
 
-[![gen_efi_app docker checker](https://github.com/vroncevic/gen_efi_app/workflows/gen_efi_app%20docker%20checker/badge.svg)](https://github.com/vroncevic/gen_efi_app/actions?query=workflow%3A%22gen_efi_app+docker+checker%22)
+[![gen_efi_app docker checker](https://github.com/electux/gen_efi_app/workflows/gen_efi_app%20docker%20checker/badge.svg)](https://github.com/electux/gen_efi_app/actions?query=workflow%3A%22gen_efi_app+docker+checker%22)
 
 ### Dependencies
 
 **gen_efi_app** requires next modules and libraries:
 
-* [ats-utilities - Python App/Tool/Script Utilities](https://vroncevic.github.io/ats_utilities)
+* [ats-utilities - Python App/Tool/Script Utilities](https://electux.github.io/ats_utilities)
 
 ### Tool structure
 
@@ -126,7 +126,7 @@ More documentation and info at:
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-Copyright (C) 2020 by [vroncevic.github.io/gen_efi_app](https://vroncevic.github.io/gen_efi_app/)
+Copyright (C) 2020 by [electux.github.io/gen_efi_app](https://electux.github.io/gen_efi_app/)
 
 **gen_efi_app** is free software; you can redistribute it and/or modify
 it under the same terms as Python itself, either Python version 2.x/3.x or,
@@ -134,6 +134,6 @@ at your option, any later version of Python 3 you may have available.
 
 Lets help and support PSF.
 
-[![Python Software Foundation](https://raw.githubusercontent.com/vroncevic/gen_efi_app/dev/docs/psf-logo-alpha.png)](https://www.python.org/psf/)
+[![Python Software Foundation](https://raw.githubusercontent.com/electux/gen_efi_app/dev/docs/psf-logo-alpha.png)](https://www.python.org/psf/)
 
 [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://psfmember.org/index.php?q=civicrm/contribute/transact&reset=1&id=2)
