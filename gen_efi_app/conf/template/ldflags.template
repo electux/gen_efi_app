@@ -22,9 +22,9 @@ EFI_LDS = /usr/lib/elf_x86_64_efi.lds
 LDFLAGS = \
 	-nostdlib \
 	-znocombreloc \
-	-T $(EFI_LDS) \
+	-T $$(EFI_LDS) \
 	-shared \
 	-Bsymbolic \
-	-L $(EFI_LIB) \
-	-L $(LIB) \
-	$(EFI_CRT_OBJS)
+	-L $$(EFI_LIB) \
+	-L $$(LIB) \
+	$$(EFI_CRT_OBJS)

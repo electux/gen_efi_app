@@ -16,7 +16,7 @@
      You should have received a copy of the GNU General Public License along
      with this program. If not, see <http://www.gnu.org/licenses/>.
  Info
-     Defined class GenGen_efi_app with attribute(s) and method(s).
+     Defined class GenEfi with attribute(s) and method(s).
      Generate module file generator_test.py by template and parameters.
 '''
 
@@ -24,6 +24,8 @@ import sys
 
 try:
     from pathlib import Path
+    from gen_efi_app.pro.config import ProConfig
+    from gen_efi_app.pro.config.pro_name import ProName
     from gen_efi_app.pro.read_template import ReadTemplate
     from gen_efi_app.pro.write_template import WriteTemplate
     from ats_utilities.checker import ATSChecker
@@ -47,27 +49,27 @@ __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
 
 
-class GenGen_efi_app(FileChecking):
+class GenEfi(FileChecking, ProConfig, ProName):
     '''
-        Defined class GenGen_efi_app with attribute(s) and method(s).
+        Defined class GenEfi with attribute(s) and method(s).
         Generate module file generator_test.py by template and parameters.
         It defines:
 
             :attributes:
                 | GEN_VERBOSE - console text indicator for process-phase.
-                | PRO_STRUCTURE - project setup (template, module).
+                | PRO_STRUCTURE - project structure.
                 | __reader - reader API.
                 | __writer - writer API.
-                | __config - project setup in dict format.
             :methods:
                 | __init__ - initial constructor.
                 | get_reader - getter for template reader.
                 | get_writer - getter for template writer.
-                | gen_setup - generate module file setup.py.
-                | __str__ - dunder method for GenGen_efi_app.
+                | gen_project - generate efi project structure.
+                | __str__ - dunder method for GenEfi.
     '''
 
-    GEN_VERBOSE = 'GEN_EFI_APP::PRO::GEN_SETUP'
+    GEN_VERBOSE = 'GEN_EFI_APP::PRO::GEN_EFI'
+    PRO_STRUCTURE = '/../conf/project.yaml'
 
     def __init__(self, verbose=False):
         '''
@@ -78,9 +80,22 @@ class GenGen_efi_app(FileChecking):
             :exceptions: None
         '''
         FileChecking.__init__(self, verbose=verbose)
-        verbose_message(GenGen_efi_app.GEN_VERBOSE, verbose, 'init setup')
+        ProConfig.__init__(self, verbose=verbose)
+        ProName.__init__(self, verbose=verbose)
+        verbose_message(GenEfi.GEN_VERBOSE, verbose, 'init generator')
         self.__reader = ReadTemplate(verbose=verbose)
         self.__writer = WriteTemplate(verbose=verbose)
+        project_structure = '{0}{1}'.format(
+            Path(__file__).parent, GenEfi.PRO_STRUCTURE
+        )
+        self.check_path(file_path=project_structure, verbose=verbose)
+        self.check_mode(file_mode='r', verbose=verbose)
+        self.check_format(
+            file_path=project_structure, file_format='yaml', verbose=verbose
+        )
+        if self.is_file_ok():
+            yml2obj = Yaml2Object(project_structure)
+            self.config = yml2obj.read_configuration()
 
     def get_reader(self):
         '''
@@ -102,7 +117,7 @@ class GenGen_efi_app(FileChecking):
         '''
         return self.__writer
 
-    def gen_setup(self, pro_name, verbose=False):
+    def gen_project(self, pro_name, verbose=False):
         '''
             Generate module generator_test.py.
 
@@ -122,24 +137,18 @@ class GenGen_efi_app(FileChecking):
             raise ATSTypeError(error)
         if status == ATSChecker.VALUE_ERROR:
             raise ATSBadCallError(error)
-        status, setup_content = False, None
-        verbose_message(
-            GenGen_efi_app.GEN_VERBOSE, verbose, 'generating module', pro_name
-        )
-        template_file, module = 'generator_test.template', 'generator_test.py'
-        if bool(template_file):
-            setup_content = self.__reader.read(
-                template_file, verbose=verbose
-            )
-            if setup_content:
+        status = False
+        if bool(self.config):
+            templates = self.__reader.read(self.config , verbose=verbose)
+            if bool(templates):
                 status = self.__writer.write(
-                    setup_content, pro_name, module, verbose=verbose
+                    templates, pro_name, verbose=verbose
                 )
         return status
 
     def __str__(self):
         '''
-            Dunder method for GenGen_efi_app.
+            Dunder method for GenEfi.
 
             :return: object in a human-readable format.
             :rtype: <str>

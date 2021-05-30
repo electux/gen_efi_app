@@ -15,4 +15,3 @@
 # with this program_name.  If not, see <http://www.gnu.org/licenses/>.
 
 OBJS = main.o
-

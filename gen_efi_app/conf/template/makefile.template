@@ -21,13 +21,13 @@ include ocflags.mk
 
 TARGET = hello.efi
 
-all: $(TARGET)
+all: $$(TARGET)
 
-hello.so: $(OBJS)
-	ld $(LDFLAGS) $(OBJS) -o $@ -lefi -lgnuefi
+hello.so: $$(OBJS)
+	ld $$(LDFLAGS) $$(OBJS) -o $$@ -lefi -lgnuefi
 
 %.efi: %.so
-	objcopy $(OCFLAGS) $^ $@
+	objcopy $$(OCFLAGS) $$^ $$@
 
 clean:
-	rm -f $(TARGET) $(OBJS) *.so
+	rm -f $$(TARGET) $$(OBJS) *.so

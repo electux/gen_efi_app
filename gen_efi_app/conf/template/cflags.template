@@ -17,9 +17,9 @@
 EFI_INC = /usr/include/efi
 
 CFLAGS = \
-	-I$(EFI_INC) \
-	-I$(EFI_INC)/x86_64 \
-	-I$(EFI_INC)/protocol \
+	-I$$(EFI_INC) \
+	-I$$(EFI_INC)/x86_64 \
+	-I$$(EFI_INC)/protocol \
 	-fno-stack-protector \
 	-fpic \
 	-fshort-wchar \
