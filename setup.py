@@ -111,7 +111,7 @@ setup(
     keywords='EFI, App, x86_64, Intel, generator',
     platforms='POSIX',
     classifiers=PYP_CLASSIFIERS,
-    packages=['gen_efi_app', 'gen_efi_app.pro'],
+    packages=['gen_efi_app', 'gen_efi_app.pro', 'gen_efi_app.pro.config'],
     install_requires=['ats-utilities'],
     package_data = {
         'gen_efi_app': [
