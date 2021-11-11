@@ -24,6 +24,7 @@ import sys
 from os.path import exists
 
 try:
+    from six import add_metaclass
     from pathlib import Path
     from gen_efi_app.pro import GenEfi
     from ats_utilities.logging import ATSLogger
@@ -40,12 +41,13 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = 'Copyright 2020, https://vroncevic.github.io/gen_efi_app'
 __credits__ = ['Vladimir Roncevic']
 __license__ = 'https://github.com/electux/gen_efi_app/blob/dev/LICENSE'
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
 
 
+@add_metaclass(CooperativeMeta)
 class GenEfiApp(CfgCLI):
     '''
         Defined class GenEfiApp with attribute(s) and method(s).
@@ -53,7 +55,6 @@ class GenEfiApp(CfgCLI):
         It defines:
 
             :attributes:
-                | __metaclass__ - setting cooperative metaclasses.
                 | GEN_VERBOSE - console text indicator for process-phase.
                 | CONFIG - tool info file path.
                 | LOG - tool log file path.
@@ -65,7 +66,6 @@ class GenEfiApp(CfgCLI):
                 | __str__ - dunder method for GenEfiApp.
     '''
 
-    __metaclass__ = CooperativeMeta
     GEN_VERBOSE = 'GEN_EFI_APP'
     CONFIG = '/conf/gen_efi_app.cfg'
     LOG = '/log/gen_efi_app.log'
