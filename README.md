@@ -10,7 +10,7 @@ The README is used to introduce the modules and provide instructions on
 how to install the modules, any machine dependencies it may have and any
 other information that should be provided before the modules are installed.
 
-[![gen_efi_app py code checker](https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_py_checker.yml/badge.svg)](https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_py_checker.yml) [![gen_efi_app python package checker](https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_package.yml/badge.svg)](https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_package.yml) [![GitHub issues open](https://img.shields.io/github/issues/vroncevic/gen_efi_app.svg)](https://github.com/vroncevic/gen_efi_app/issues) [![GitHub contributors](https://img.shields.io/github/contributors/vroncevic/gen_efi_app.svg)](https://github.com/vroncevic/gen_efi_app/graphs/contributors)
+[![gen_efi_app py code checker](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_py_checker.yml/badge.svg)](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_py_checker.yml) [![gen_efi_app python package checker](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_package.yml/badge.svg)](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_package.yml) [![GitHub issues open](https://img.shields.io/github/issues/electux/gen_efi_app.svg)](https://github.com/electux/gen_efi_app/issues) [![GitHub contributors](https://img.shields.io/github/contributors/electux/gen_efi_app.svg)](https://github.com/electux/gen_efi_app/graphs/contributors)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -33,9 +33,9 @@ other information that should be provided before the modules are installed.
 
 Used next development environment
 
-![Development environment](https://raw.githubusercontent.com/vroncevic/gen_efi_app/dev/docs/ubuntuxis.png)
+![Development environment](https://raw.githubusercontent.com/electux/gen_efi_app/dev/docs/ubuntuxis.png)
 
-[![gen_efi_app build python2 package](https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_python2_publish.yml/badge.svg)](https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_python2_publish.yml) [![gen_efi_app build python3 package](https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_python3_publish.yml/badge.svg)](https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_python3_publish.yml)
+[![gen_efi_app build python2 package](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python2_publish.yml/badge.svg)](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python2_publish.yml) [![gen_efi_app build python3 package](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python3_publish.yml/badge.svg)](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python3_publish.yml)
 
 Currently there are three ways to install package
 * Install process based on using pip mechanism
@@ -58,7 +58,7 @@ pip3 install gen_efi_app
 
 ##### Install using build
 
-Navigate to release **[page](https://github.com/vroncevic/gen_efi_app/releases/)** download and extract release archive 📦.
+Navigate to release **[page](https://github.com/electux/gen_efi_app/releases/)** download and extract release archive 📦.
 
 To install **gen_efi_app** type the following
 
@@ -93,7 +93,7 @@ ln -s /usr/local/lib/python3.9/dist-packages/usr/local/bin/gen_efi_app_run.py /u
 
 ##### Install using py setup
 
-Navigate to **[release page](https://github.com/vroncevic/gen_efi_app/releases)** download and extract release archive 📦.
+Navigate to **[release page](https://github.com/electux/gen_efi_app/releases)** download and extract release archive 📦.
 
 To install **gen_efi_app**, locate and run setup.py with arguments
 
@@ -114,13 +114,13 @@ python3 setup.py install_egg_info
 
 You can use Dockerfile to create image/container 🚢.
 
-[![gen_efi_app docker checker](https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_docker_checker.yml/badge.svg)](https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_docker_checker.yml)
+[![gen_efi_app docker checker](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_docker_checker.yml/badge.svg)](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_docker_checker.yml)
 
 ### Dependencies
 
 **gen_efi_app** requires next modules and libraries
 
-* [ats-utilities - Python App/Tool/Script Utilities](https://electux.github.io/ats_utilities)
+* [ats-utilities - Python App/Tool/Script Utilities](https://vroncevic.github.io/ats-utilities)
 
 ### Tool structure
 
@@ -159,7 +159,7 @@ gen_efi_app/
 ### Docs
 
 [![Documentation Status](https://readthedocs.org/projects/gen_efi_app/badge/?version=latest)](https://gen_efi_app.readthedocs.io/en/latest/?badge=latest)
- [![pages-build-deployment](https://github.com/vroncevic/gen_efi_app/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/vroncevic/gen_efi_app/actions/workflows/pages/pages-build-deployment)
+ [![pages-build-deployment](https://github.com/electux/gen_efi_app/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/electux/gen_efi_app/actions/workflows/pages/pages-build-deployment)
 
 📗 More documentation and info at
 

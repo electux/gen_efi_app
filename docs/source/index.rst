@@ -11,8 +11,8 @@ other information that should be provided before the modules are installed.
 
 |Python package| |GitHub issues| |Documentation Status| |GitHub contributors|
 
-.. |Python package| image:: https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_package.yml/badge.svg
-   :target: https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_package.yml/badge.svg?branch=main
+.. |Python package| image:: https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_package.yml/badge.svg
+   :target: https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_package.yml/badge.svg?branch=main
 
 .. |GitHub issues| image:: https://img.shields.io/github/issues/electux/gen_efi_app.svg
    :target: https://github.com/electux/gen_efi_app/issues
@@ -35,11 +35,11 @@ Installation
 
 |Install Python2 Package| |Install Python3 Package|
 
-.. |Install Python2 Package| image:: https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_python2_publish.yml/badge.svg
-   :target: https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_python2_publish.yml/badge.svg?branch=main
+.. |Install Python2 Package| image:: https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python2_publish.yml/badge.svg
+   :target: https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python2_publish.yml/badge.svg?branch=main
 
-.. |Install Python3 Package| image:: https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_python3_publish.yml/badge.svg
-   :target: https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_python3_publish.yml/badge.svg?branch=main
+.. |Install Python3 Package| image:: https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python3_publish.yml/badge.svg
+   :target: https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python3_publish.yml/badge.svg?branch=main
 
 Navigate to release `page`_ download and extract release archive.
 
@@ -73,8 +73,8 @@ You can use Docker to create image/container, or You can use pip to install
 
 |GitHub docker checker|
 
-.. |GitHub docker checker| image:: https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_docker_checker.yml/badge.svg
-   :target: https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_docker_checker.yml
+.. |GitHub docker checker| image:: https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_docker_checker.yml/badge.svg
+   :target: https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_docker_checker.yml
 
 Dependencies
 -------------
