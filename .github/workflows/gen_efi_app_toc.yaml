@@ -1,8 +1,11 @@
-name: TOC Generator gen_efi_app
-on: push
+name: gen_efi_app toc generator
+on:
+  push:
+    paths:
+      - '**.md'
 jobs:
   generateTOC:
-    name: TOC Generator
+    name: gen_efi_app toc generator
     runs-on: ubuntu-latest
     steps:
       - uses: technote-space/toc-generator@v2

@@ -2,15 +2,15 @@
 
 # Create EFI application
 
-**gen_efi_app** is tool for creating EFI project skeleton.
+☯️ **gen_efi_app** is tool for creating EFI project skeleton.
 
-Developed in **[python](https://www.python.org/)** code: **100%**.
+Developed in 🐍 **[python](https://www.python.org/)** code.
 
 The README is used to introduce the modules and provide instructions on
 how to install the modules, any machine dependencies it may have and any
 other information that should be provided before the modules are installed.
 
-![Python package](https://github.com/electux/gen_efi_app/workflows/Python%20package%20gen_efi_app/badge.svg?branch=main) [![GitHub issues open](https://img.shields.io/github/issues/electux/gen_efi_app.svg)](https://github.com/electux/gen_efi_app/issues) [![GitHub contributors](https://img.shields.io/github/contributors/electux/gen_efi_app.svg)](https://github.com/electux/gen_efi_app/graphs/contributors)
+[![gen_efi_app py code checker](https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_py_checker.yml/badge.svg)](https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_py_checker.yml) [![gen_efi_app python package checker](https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_package.yml/badge.svg)](https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_package.yml) [![GitHub issues open](https://img.shields.io/github/issues/vroncevic/gen_efi_app.svg)](https://github.com/vroncevic/gen_efi_app/issues) [![GitHub contributors](https://img.shields.io/github/contributors/vroncevic/gen_efi_app.svg)](https://github.com/vroncevic/gen_efi_app/graphs/contributors)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -18,75 +18,117 @@ other information that should be provided before the modules are installed.
 
 - [Installation](#installation)
     - [Install using pip](#install-using-pip)
-    - [Install using setuptools](#install-using-setuptools)
+    - [Install using build](#install-using-build)
+    - [Install using py setup](#install-using-py-setup)
     - [Install using docker](#install-using-docker)
 - [Dependencies](#dependencies)
 - [Tool structure](#tool-structure)
 - [Docs](#docs)
+- [Contributing](#contributing)
 - [Copyright and Licence](#copyright-and-licence)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ### Installation
 
-![Install Python2 Package](https://github.com/electux/gen_efi_app/workflows/Install%20Python2%20Package%20gen_efi_app/badge.svg?branch=main) ![Install Python3 Package](https://github.com/electux/gen_efi_app/workflows/Install%20Python3%20Package%20gen_efi_app/badge.svg?branch=main)
+Used next development environment
 
-Currently there are three ways to install tool:
-* Install process based on pip
-* Install process based on setup.py (setuptools)
+![Development environment](https://raw.githubusercontent.com/vroncevic/gen_efi_app/dev/docs/ubuntuxis.png)
+
+[![gen_efi_app build python2 package](https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_python2_publish.yml/badge.svg)](https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_python2_publish.yml) [![gen_efi_app build python3 package](https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_python3_publish.yml/badge.svg)](https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_python3_publish.yml)
+
+Currently there are three ways to install package
+* Install process based on using pip mechanism
+* Install process based on build mechanism
+* Install process based on setup.py mechanism
 * Install process based on docker mechanism
 
 ##### Install using pip
 
-Python package is located at **[pypi.org](https://pypi.org/project/gen_efi_app/)**.
+Python 📦 is located at **[pypi.org](https://pypi.org/project/gen_efi_app/)**.
 
 You can install by using pip
-```
-#python2
-pip install gen_efi_app
-#python3
+
+```bash
+# python2
+pip2 install gen_efi_app
+# python3
 pip3 install gen_efi_app
 ```
 
-##### Install using setuptools
+##### Install using build
 
-Navigate to **[release page](https://github.com/electux/gen_efi_app/releases)** download and extract release archive.
+Navigate to release **[page](https://github.com/vroncevic/gen_efi_app/releases/)** download and extract release archive 📦.
 
-To install modules, locate and run setup.py, type the following:
+To install **gen_efi_app** type the following
+
+```bash
+tar xvzf gen_efi_app-x.y.z.tar.gz
+cd gen_efi_app-x.y.z/
+# python2
+wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
+python2 get-pip.py 
+python2 -m pip install --upgrade setuptools
+python2 -m pip install --upgrade pip
+python2 -m pip install --upgrade build
+pip2 install -r requirements.txt
+python2 -m build --no-isolation --wheel
+pip2 install ./dist/gen_efi_app-*-py2-none-any.whl
+rm -f get-pip.py
+chmod 755 /usr/local/lib/python2.7/dist-packages/usr/local/bin/gen_efi_app_run.py
+ln -s /usr/local/lib/python2.7/dist-packages/usr/local/bin/gen_efi_app_run.py /usr/local/bin/gen_efi_app_run.py
+# python3
+wget https://bootstrap.pypa.io/get-pip.py
+python3 get-pip.py 
+python3 -m pip install --upgrade setuptools
+python3 -m pip install --upgrade pip
+python3 -m pip install --upgrade build
+pip3 install -r requirements.txt
+python3 -m build --no-isolation --wheel
+pip3 install ./dist/gen_efi_app-*-py3-none-any.whl
+rm -f get-pip.py
+chmod 755 /usr/local/lib/python3.9/dist-packages/usr/local/bin/gen_efi_app_run.py
+ln -s /usr/local/lib/python3.9/dist-packages/usr/local/bin/gen_efi_app_run.py /usr/local/bin/gen_efi_app_run.py
 ```
+
+##### Install using py setup
+
+Navigate to **[release page](https://github.com/vroncevic/gen_efi_app/releases)** download and extract release archive 📦.
+
+To install **gen_efi_app**, locate and run setup.py with arguments
+
+```bash
 tar xvzf gen_efi_app-x.y.z.tar.gz
 cd gen_efi_app-x.y.z
-#python2
-pip install -r requirements.txt
-python setup.py install_lib
-python setup.py install_egg_info
-python setup.py install_data
-#python3
+# python2
+pip2 install -r requirements.txt
+python2 setup.py install_lib
+python2 setup.py install_egg_info
+# python3
 pip3 install -r requirements.txt
 python3 setup.py install_lib
 python3 setup.py install_egg_info
-python3 setup.py install_data
 ```
 
 ##### Install using docker
 
-You can use Dockerfile to create image/container.
+You can use Dockerfile to create image/container 🚢.
 
-[![gen_efi_app docker checker](https://github.com/electux/gen_efi_app/workflows/gen_efi_app%20docker%20checker/badge.svg)](https://github.com/electux/gen_efi_app/actions?query=workflow%3A%22gen_efi_app+docker+checker%22)
+[![gen_efi_app docker checker](https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_docker_checker.yml/badge.svg)](https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_docker_checker.yml)
 
 ### Dependencies
 
-**gen_efi_app** requires next modules and libraries:
+**gen_efi_app** requires next modules and libraries
 
 * [ats-utilities - Python App/Tool/Script Utilities](https://electux.github.io/ats_utilities)
 
 ### Tool structure
 
-**gen_efi_app** is based on OOP:
+**gen_efi_app** is based on OOP
 
-Generator structure:
+Generator structure
 
-```
+```bash
 gen_efi_app/
 ├── conf/
 │   ├── gen_efi_app.cfg
@@ -116,11 +158,17 @@ gen_efi_app/
 
 ### Docs
 
-[![Documentation Status](https://readthedocs.org/projects/gen_efi_app/badge/?version=latest)](https://gen_efi_app.readthedocs.io/projects/gen_efi_app/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/gen_efi_app/badge/?version=latest)](https://gen_efi_app.readthedocs.io/en/latest/?badge=latest)
+ [![pages-build-deployment](https://github.com/vroncevic/gen_efi_app/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/vroncevic/gen_efi_app/actions/workflows/pages/pages-build-deployment)
 
-More documentation and info at:
+📗 More documentation and info at
+
 * [gen_efi_app.readthedocs.io](https://gen_efi_app.readthedocs.io/en/latest/)
 * [www.python.org](https://www.python.org/)
+
+### Contributing
+
+🌎 🌍 🌏 [Contributing to gen_efi_app](CONTRIBUTING.md)
 
 ### Copyright and Licence
 
