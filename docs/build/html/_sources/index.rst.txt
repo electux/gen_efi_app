@@ -3,7 +3,7 @@ Create EFI application
 
 **gen_efi_app** is tool for creating EFI project skeleton.
 
-Developed in `python <https://www.python.org/>`_ code: **100%**.
+Developed in `python <https://www.python.org/>`_ code.
 
 The README is used to introduce the modules and provide instructions on
 how to install the modules, any machine dependencies it may have and any
@@ -11,8 +11,8 @@ other information that should be provided before the modules are installed.
 
 |Python package| |GitHub issues| |Documentation Status| |GitHub contributors|
 
-.. |Python package| image:: https://github.com/electux/gen_efi_app/workflows/Python%20package%20gen_efi_app/badge.svg
-   :target: https://github.com/electux/gen_efi_app/workflows/Python%20package%20gen_efi_app/badge.svg?branch=main
+.. |Python package| image:: https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_package.yml/badge.svg
+   :target: https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_package.yml/badge.svg?branch=main
 
 .. |GitHub issues| image:: https://img.shields.io/github/issues/electux/gen_efi_app.svg
    :target: https://github.com/electux/gen_efi_app/issues
@@ -25,7 +25,7 @@ other information that should be provided before the modules are installed.
 
 .. toctree::
    :maxdepth: 4
-   :caption: Contents:
+   :caption: Contents
 
    self
    modules
@@ -35,17 +35,17 @@ Installation
 
 |Install Python2 Package| |Install Python3 Package|
 
-.. |Install Python2 Package| image:: https://github.com/electux/gen_efi_app/workflows/Install%20Python2%20Package%20gen_efi_app/badge.svg
-   :target: https://github.com/electux/gen_efi_app/workflows/Install%20Python2%20Package%20gen_efi_app/badge.svg?branch=main
+.. |Install Python2 Package| image:: https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_python2_publish.yml/badge.svg
+   :target: https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_python2_publish.yml/badge.svg?branch=main
 
-.. |Install Python3 Package| image:: https://github.com/electux/gen_efi_app/workflows/Install%20Python3%20Package%20gen_efi_app/badge.svg
-   :target: https://github.com/electux/gen_efi_app/workflows/Install%20Python3%20Package%20gen_efi_app/badge.svg?branch=main
+.. |Install Python3 Package| image:: https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_python3_publish.yml/badge.svg
+   :target: https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_python3_publish.yml/badge.svg?branch=main
 
 Navigate to release `page`_ download and extract release archive.
 
 .. _page: https://github.com/electux/gen_efi_app/releases
 
-To install this set of modules type the following:
+To install this set of modules type the following
 
 .. code-block:: bash
 
@@ -62,7 +62,7 @@ To install this set of modules type the following:
     python3 setup.py install_egg_info
     python3 setup.py install_data
 
-You can use Docker to create image/container, or You can use pip to install:
+You can use Docker to create image/container, or You can use pip to install
 
 .. code-block:: bash
 
@@ -73,22 +73,22 @@ You can use Docker to create image/container, or You can use pip to install:
 
 |GitHub docker checker|
 
-.. |GitHub docker checker| image:: https://github.com/electux/gen_efi_app/workflows/gen_efi_app%20docker%20checker/badge.svg
-   :target: https://github.com/electux/gen_efi_app/actions?query=workflow%3A%22gen_efi_app+docker+checker%22
+.. |GitHub docker checker| image:: https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_docker_checker.yml/badge.svg
+   :target: https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_docker_checker.yml
 
 Dependencies
 -------------
 
-**gen_efi_app** requires next modules and libraries:
+**gen_efi_app** requires next modules and libraries
 
 * `ats-utilities - Python App/Tool/Script Utilities <https://pypi.org/project/ats-utilities/>`_
 
 Tool structure
 ------------------
 
-**gen_efi_app** is based on OOP:
+**gen_efi_app** is based on OOP
 
-Code structure:
+Code structure
 
 .. code-block:: bash
 

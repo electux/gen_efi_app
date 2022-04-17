@@ -29,10 +29,11 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = 'Copyright 2020, https://vroncevic.github.io/gen_efi_app'
 __credits__ = ['Vladimir Roncevic']
 __license__ = 'https://github.com/electux/gen_efi_app/blob/dev/LICENSE'
-__version__ = '1.0.1'
+__version__ = '1.1.1'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
+
 
 def install_directory():
     '''
@@ -73,8 +74,10 @@ def install_directory():
     print(message)
     return None
 
+
 INSTALL_DIR = install_directory()
 TOOL_DIR = 'gen_efi_app/'
+CONF, TEMPLATE, LOG = 'conf', 'conf/template', 'log'
 if not bool(INSTALL_DIR):
     print('[setup] force exit from install process')
     sys.exit(127)
@@ -82,7 +85,9 @@ THIS_DIR, LONG_DESCRIPTION = abspath(dirname(__file__)), None
 with open(join(THIS_DIR, 'README.md')) as readme:
     LONG_DESCRIPTION = readme.read()
 PROGRAMMING_LANG = 'Programming Language :: Python ::'
-VERSIONS = ['2.7', '3', '3.2', '3.3', '3.4']
+VERSIONS = [
+    '2.7', '3', '3.1', '3.2', '3.3', '3.4', '3.5', '3.6', '3.7', '3.8', '3.9'
+]
 SUPPORTED_PY_VERSIONS = [
     '{0} {1}'.format(PROGRAMMING_LANG, VERSION) for VERSION in VERSIONS
 ]
@@ -100,7 +105,7 @@ APPROVED_LICENSES = [
 PYP_CLASSIFIERS = SUPPORTED_PY_VERSIONS + APPROVED_LICENSES
 setup(
     name='gen_efi_app',
-    version='1.0.1',
+    version='1.1.1',
     description='EFI Application generator',
     author='Vladimir Roncevic',
     author_email='elektron.ronca@gmail.com',
@@ -113,18 +118,19 @@ setup(
     classifiers=PYP_CLASSIFIERS,
     packages=['gen_efi_app', 'gen_efi_app.pro', 'gen_efi_app.pro.config'],
     install_requires=['ats-utilities'],
-    package_data = {
+    package_data={
         'gen_efi_app': [
-            'conf/gen_efi_app.cfg',
-            'conf/gen_efi_app_util.cfg',
-            'conf/project.yaml',
-            'conf/template/cflags.template',
-            'conf/template/ldflags.template',
-            'conf/template/makefile.template',
-            'conf/template/main.template',
-            'conf/template/objects.template',
-            'conf/template/ocflags.template',
-            'log/gen_efi_app.log'
+            '{0}/{1}'.format(CONF, 'gen_efi_app.logo'),
+            '{0}/{1}'.format(CONF, 'gen_efi_app.cfg'),
+            '{0}/{1}'.format(CONF, 'gen_efi_app_util.cfg'),
+            '{0}/{1}'.format(CONF, 'project.yaml'),
+            '{0}/{1}'.format(TEMPLATE, 'cflags.template'),
+            '{0}/{1}'.format(TEMPLATE, 'ldflags.template'),
+            '{0}/{1}'.format(TEMPLATE, 'makefile.template'),
+            '{0}/{1}'.format(TEMPLATE, 'main.template'),
+            '{0}/{1}'.format(TEMPLATE, 'objects.template'),
+            '{0}/{1}'.format(TEMPLATE, 'ocflags.template'),
+            '{0}/{1}'.format(LOG, 'gen_efi_app.log')
         ]
     },
     data_files=[(

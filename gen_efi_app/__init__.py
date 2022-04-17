@@ -21,12 +21,12 @@
 '''
 
 import sys
-from os.path import exists
+from os.path import exists, dirname, realpath
 
 try:
     from six import add_metaclass
-    from pathlib import Path
     from gen_efi_app.pro import GenEfi
+    from ats_utilities.splash import Splash
     from ats_utilities.logging import ATSLogger
     from ats_utilities.cli.cfg_cli import CfgCLI
     from ats_utilities.cooperative import CooperativeMeta
@@ -41,7 +41,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = 'Copyright 2020, https://vroncevic.github.io/gen_efi_app'
 __credits__ = ['Vladimir Roncevic']
 __license__ = 'https://github.com/electux/gen_efi_app/blob/dev/LICENSE'
-__version__ = '1.0.1'
+__version__ = '1.1.1'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -58,6 +58,7 @@ class GenEfiApp(CfgCLI):
                 | GEN_VERBOSE - console text indicator for process-phase.
                 | CONFIG - tool info file path.
                 | LOG - tool log file path.
+                | LOGO - logo for splash screen.
                 | OPS - list of tool options.
                 | logger - logger object API.
             :methods:
@@ -69,6 +70,7 @@ class GenEfiApp(CfgCLI):
     GEN_VERBOSE = 'GEN_EFI_APP'
     CONFIG = '/conf/gen_efi_app.cfg'
     LOG = '/log/gen_efi_app.log'
+    LOGO = '/conf/gen_efi_app.logo'
     OPS = ['-g', '--gen', '-v', '--verbose', '--version']
 
     def __init__(self, verbose=False):
@@ -79,7 +81,15 @@ class GenEfiApp(CfgCLI):
             :type verbose: <bool>
             :exceptions: None
         '''
-        current_dir = Path(__file__).resolve().parent
+        current_dir = dirname(realpath(__file__))
+        gen_efi_app_property = {
+            'ats_organization': 'vroncevic',
+            'ats_repository': 'gen_efi_app',
+            'ats_name': 'gen_efi_app',
+            'ats_logo_path': '{0}{1}'.format(current_dir, GenEfiApp.LOGO),
+            'ats_use_github_infrastructure': True
+        }
+        splash = Splash(gen_efi_app_property, verbose=verbose)
         base_info = '{0}{1}'.format(current_dir, GenEfiApp.CONFIG)
         CfgCLI.__init__(self, base_info, verbose=verbose)
         verbose_message(GenEfiApp.GEN_VERBOSE, verbose, 'init tool info')

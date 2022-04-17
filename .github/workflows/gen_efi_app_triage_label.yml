@@ -1,14 +1,14 @@
-name: Triage gen_efi_app label
+name: gen_efi_app triage label
 on:
   issues:
     types: [opened]
 jobs:
   applyTriageLabel:
-    name: Apply Triage Label
+    name: gen_efi_app triage label
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Apply Triage Label
+      - name: gen_efi_app triage label
         uses: actions/github@v1.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
