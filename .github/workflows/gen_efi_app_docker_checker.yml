@@ -1,4 +1,4 @@
-name: gen_efi_app docker checker
+name: gen_efi_app_docker_checker
 on:
   push:
     branches: [ main ]
@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: gen_efi_app docker checker build image
+    - name: gen_efi_app_docker_checker
       id: docker_checker
       run: |
         echo Building Docker image
