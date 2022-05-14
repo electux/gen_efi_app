@@ -10,7 +10,7 @@ The README is used to introduce the modules and provide instructions on
 how to install the modules, any machine dependencies it may have and any
 other information that should be provided before the modules are installed.
 
-[![gen_efi_app py code checker](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_py_checker.yml/badge.svg)](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_py_checker.yml) [![gen_efi_app python package checker](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_package.yml/badge.svg)](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_package.yml) [![GitHub issues open](https://img.shields.io/github/issues/electux/gen_efi_app.svg)](https://github.com/electux/gen_efi_app/issues) [![GitHub contributors](https://img.shields.io/github/contributors/electux/gen_efi_app.svg)](https://github.com/electux/gen_efi_app/graphs/contributors)
+[![gen_efi_app python checker](https://img.shields.io/github/workflow/status/electux/gen_efi_app/gen_efi_app_python_checker?style=flat&label=gen_efi_app%20python%20checker)](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python_checker.yml) [![gen_efi_app package checker](https://img.shields.io/github/workflow/status/electux/gen_efi_app/gen_efi_app_package_checker?style=flat&label=gen_efi_app%20package%20checker)](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_package_checker.yml) [![GitHub issues open](https://img.shields.io/github/issues/electux/gen_efi_app.svg)](https://github.com/electux/gen_efi_app/issues) [![GitHub contributors](https://img.shields.io/github/contributors/electux/gen_efi_app.svg)](https://github.com/electux/gen_efi_app/graphs/contributors)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -35,7 +35,7 @@ Used next development environment
 
 ![Development environment](https://raw.githubusercontent.com/electux/gen_efi_app/dev/docs/ubuntuxis.png)
 
-[![gen_efi_app build python2 package](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python2_publish.yml/badge.svg)](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python2_publish.yml) [![gen_efi_app build python3 package](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python3_publish.yml/badge.svg)](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python3_publish.yml)
+[![gen_efi_app python2 build](https://img.shields.io/github/workflow/status/electux/gen_efi_app/gen_efi_app_python2_build?style=flat&label=gen_efi_app%20python2%20build)](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python2_build.yml) [![gen_efi_app python3 build](https://img.shields.io/github/workflow/status/electux/gen_efi_app/gen_efi_app_python3_build?style=flat&label=gen_efi_app%20python3%20build)](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python3_build.yml)
 
 Currently there are three ways to install package
 * Install process based on using pip mechanism
@@ -60,7 +60,7 @@ pip3 install gen_efi_app
 
 Navigate to release **[page](https://github.com/electux/gen_efi_app/releases/)** download and extract release archive 📦.
 
-To install **gen_efi_app** type the following
+To install **gen_efi_app** 📦 type the following
 
 ```bash
 tar xvzf gen_efi_app-x.y.z.tar.gz
@@ -95,7 +95,7 @@ ln -s /usr/local/lib/python3.9/dist-packages/usr/local/bin/gen_efi_app_run.py /u
 
 Navigate to **[release page](https://github.com/electux/gen_efi_app/releases)** download and extract release archive 📦.
 
-To install **gen_efi_app**, locate and run setup.py with arguments
+To install **gen_efi_app** 📦 locate and run setup.py with arguments
 
 ```bash
 tar xvzf gen_efi_app-x.y.z.tar.gz
@@ -114,7 +114,7 @@ python3 setup.py install_egg_info
 
 You can use Dockerfile to create image/container 🚢.
 
-[![gen_efi_app docker checker](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_docker_checker.yml/badge.svg)](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_docker_checker.yml)
+[![gen_efi_app docker checker](https://img.shields.io/github/workflow/status/electux/gen_efi_app/gen_efi_app_docker_checker?style=flat&label=gen_efi_app%20docker%20checker)](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_docker_checker.yml)
 
 ### Dependencies
 
@@ -126,7 +126,7 @@ You can use Dockerfile to create image/container 🚢.
 
 **gen_efi_app** is based on OOP
 
-Generator structure
+🧰 Generator structure
 
 ```bash
 gen_efi_app/
@@ -159,7 +159,6 @@ gen_efi_app/
 ### Docs
 
 [![Documentation Status](https://readthedocs.org/projects/gen_efi_app/badge/?version=latest)](https://gen_efi_app.readthedocs.io/en/latest/?badge=latest)
- [![pages-build-deployment](https://github.com/electux/gen_efi_app/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/electux/gen_efi_app/actions/workflows/pages/pages-build-deployment)
 
 📗 More documentation and info at
 

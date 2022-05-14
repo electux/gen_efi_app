@@ -19,7 +19,7 @@ jobs:
           name: Run tests
           command: python -m pytest
 workflows:
-  gen_avr8:
+  gen_efi_app:
     jobs:
       - build_and_test:
           filters:

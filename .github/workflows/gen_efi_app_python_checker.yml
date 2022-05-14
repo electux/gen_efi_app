@@ -1,4 +1,4 @@
-name: gen_efi_app py checker
+name: gen_efi_app_python_checker
 on:
   push:
     branches: [ main ]
