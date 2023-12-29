@@ -10,7 +10,7 @@ The README is used to introduce the modules and provide instructions on
 how to install the modules, any machine dependencies it may have and any
 other information that should be provided before the modules are installed.
 
-[![gen_efi_app python checker](https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_python_checker.yml/badge.svg)](https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_python_checker.yml) [![gen_efi_app package checker](https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_package_checker.yml/badge.svg)](https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_package.yml) [![GitHub issues open](https://img.shields.io/github/issues/vroncevic/gen_efi_app.svg)](https://github.com/vroncevic/gen_efi_app/issues) [![GitHub contributors](https://img.shields.io/github/contributors/vroncevic/gen_efi_app.svg)](https://github.com/vroncevic/gen_efi_app/graphs/contributors)
+[![gen_efi_app python checker](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python_checker.yml/badge.svg)](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python_checker.yml) [![gen_efi_app package checker](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_package_checker.yml/badge.svg)](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_package.yml) [![GitHub issues open](https://img.shields.io/github/issues/electux/gen_efi_app.svg)](https://github.com/electux/gen_efi_app/issues) [![GitHub contributors](https://img.shields.io/github/contributors/electux/gen_efi_app.svg)](https://github.com/electux/gen_efi_app/graphs/contributors)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -33,9 +33,9 @@ other information that should be provided before the modules are installed.
 
 Used next development environment
 
-![debian linux os](https://raw.githubusercontent.com/vroncevic/gen_efi_app/dev/docs/debtux.png)
+![debian linux os](https://raw.githubusercontent.com/electux/gen_efi_app/dev/docs/debtux.png)
 
-[![gen_efi_app python3 build](https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_python3_build.yml/badge.svg)](https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_python3_build.yml)
+[![gen_efi_app python3 build](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python3_build.yml/badge.svg)](https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python3_build.yml)
 
 Currently there are three ways to install package
 * Install process based on using pip mechanism
@@ -100,7 +100,7 @@ You can use Dockerfile to create image/container.
 
 **gen_efi_app** requires next modules and libraries
 
-* [ats-utilities - Python App/Tool/Script Utilities](https://vroncevic.github.io/ats-utilities)
+* [ats-utilities - Python App/Tool/Script Utilities](https://electux.github.io/ats-utilities)
 
 ### Tool structure
 
@@ -157,6 +157,6 @@ at your option, any later version of Python 3 you may have available.
 
 Lets help and support PSF.
 
-[![Python Software Foundation](https://raw.githubusercontent.com/vroncevic/gen_efi_app/dev/docs/psf-logo-alpha.png)](https://www.python.org/psf/)
+[![Python Software Foundation](https://raw.githubusercontent.com/electux/gen_efi_app/dev/docs/psf-logo-alpha.png)](https://www.python.org/psf/)
 
 [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.python.org/psf/donations/)

@@ -26,7 +26,7 @@ from os.path import abspath, dirname, join
 from setuptools import setup
 
 __author__ = 'Vladimir Roncevic'
-__copyright__ = '(C) 2024, https://vroncevic.github.io/gen_efi_app'
+__copyright__ = '(C) 2024, https://electux.github.io/gen_efi_app'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/electux/gen_efi_app/blob/dev/LICENSE'
 __version__ = '1.3.1'
@@ -65,7 +65,7 @@ setup(
     description='EFI Application generator',
     author='Vladimir Roncevic',
     author_email='elektron.ronca@gmail.com',
-    url='https://vroncevic.github.io/gen_efi_app',
+    url='https://electux.github.io/gen_efi_app',
     license='GPL 2024 Free software to use and distributed it.',
     long_description=long_description,
     long_description_content_type='text/markdown',

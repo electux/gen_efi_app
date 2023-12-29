@@ -40,7 +40,7 @@ except ImportError as ats_error_message:
     sys.exit(f'\n{__file__}\n{ats_error_message}\n')
 
 __author__ = 'Vladimir Roncevic'
-__copyright__ = '(C) 2024, https://vroncevic.github.io/gen_efi_app'
+__copyright__ = '(C) 2024, https://electux.github.io/gen_efi_app'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/electux/gen_efi_app/blob/dev/LICENSE'
 __version__ = '1.3.1'
@@ -84,7 +84,7 @@ class GenEfiApp(CfgCLI):
         '''
         current_dir = dirname(realpath(__file__))
         gen_efi_app_property = {
-            'ats_organization': 'vroncevic',
+            'ats_organization': 'electux',
             'ats_repository': f'{self._GEN_VERBOSE.lower()}',
             'ats_name': f'{self._GEN_VERBOSE.lower()}',
             'ats_logo_path': f'{current_dir}{self._LOGO}',

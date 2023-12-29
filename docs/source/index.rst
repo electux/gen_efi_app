@@ -11,17 +11,17 @@ other information that should be provided before the modules are installed.
 
 |gen_efi_app python checker| |gen_efi_app python package| |github issues| |documentation status| |github contributors|
 
-.. |gen_efi_app python checker| image:: https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_python_checker.yml/badge.svg
-   :target: https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_python_checker.yml
+.. |gen_efi_app python checker| image:: https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python_checker.yml/badge.svg
+   :target: https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python_checker.yml
 
-.. |gen_efi_app python package| image:: https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_package_checker.yml/badge.svg
-   :target: https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_package.yml
+.. |gen_efi_app python package| image:: https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_package_checker.yml/badge.svg
+   :target: https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_package.yml
 
-.. |github issues| image:: https://img.shields.io/github/issues/vroncevic/gen_efi_app.svg
-   :target: https://github.com/vroncevic/gen_efi_app/issues
+.. |github issues| image:: https://img.shields.io/github/issues/electux/gen_efi_app.svg
+   :target: https://github.com/electux/gen_efi_app/issues
 
-.. |github contributors| image:: https://img.shields.io/github/contributors/vroncevic/gen_efi_app.svg
-   :target: https://github.com/vroncevic/gen_efi_app/graphs/contributors
+.. |github contributors| image:: https://img.shields.io/github/contributors/electux/gen_efi_app.svg
+   :target: https://github.com/electux/gen_efi_app/graphs/contributors
 
 .. |documentation status| image:: https://readthedocs.org/projects/gen-efi-app/badge/?version=latest
    :target: https://gen-efi-app.readthedocs.io/en/latest/?badge=latest
@@ -38,8 +38,8 @@ Installation
 
 |gen_efi_app python3 build|
 
-.. |gen_efi_app python3 build| image:: https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_python3_build.yml/badge.svg
-   :target: https://github.com/vroncevic/gen_efi_app/actions/workflows/gen_efi_app_python3_build.yml
+.. |gen_efi_app python3 build| image:: https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python3_build.yml/badge.svg
+   :target: https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python3_build.yml
 
 Navigate to release `page`_ download and extract release archive.
 
@@ -123,7 +123,7 @@ Lets help and support PSF.
 
 |python software foundation|
 
-.. |python software foundation| image:: https://raw.githubusercontent.com/vroncevic/gen_efi_app/dev/docs/psf-logo-alpha.png
+.. |python software foundation| image:: https://raw.githubusercontent.com/electux/gen_efi_app/dev/docs/psf-logo-alpha.png
    :target: https://www.python.org/psf/
 
 |donate|
