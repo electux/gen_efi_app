@@ -1,18 +1,21 @@
 Create EFI application
 -----------------------
 
-☯️ **gen_efi_app** is tool for creating EFI project skeleton.
+**gen_efi_app** is tool for creating EFI project skeleton.
 
-Developed in 🐍 `python <https://www.python.org/>`_ code.
+Developed in `python <https://www.python.org/>`_ code.
 
 The README is used to introduce the modules and provide instructions on
 how to install the modules, any machine dependencies it may have and any
 other information that should be provided before the modules are installed.
 
-|python package| |github issues| |documentation status| |github contributors|
+|gen_efi_app python checker| |gen_efi_app python package| |github issues| |documentation status| |github contributors|
 
-.. |python package| image:: https://img.shields.io/github/workflow/status/electux/gen_efi_app/gen_efi_app_python_checker?style=flat&label=gen_efi_app%20python%20checker
-   :target: https://img.shields.io/github/workflow/status/electux/gen_efi_app/gen_efi_app_python_checker
+.. |gen_efi_app python checker| image:: https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python_checker.yml/badge.svg
+   :target: https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python_checker.yml
+
+.. |gen_efi_app python package| image:: https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_package_checker.yml/badge.svg
+   :target: https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_package.yml
 
 .. |github issues| image:: https://img.shields.io/github/issues/electux/gen_efi_app.svg
    :target: https://github.com/electux/gen_efi_app/issues
@@ -20,8 +23,8 @@ other information that should be provided before the modules are installed.
 .. |github contributors| image:: https://img.shields.io/github/contributors/electux/gen_efi_app.svg
    :target: https://github.com/electux/gen_efi_app/graphs/contributors
 
-.. |documentation status| image:: https://readthedocs.org/projects/gen_efi_app/badge/?version=latest
-   :target: https://gen_efi_app.readthedocs.io/projects/gen_efi_app/en/latest/?badge=latest
+.. |documentation status| image:: https://readthedocs.org/projects/gen-efi-app/badge/?version=latest
+   :target: https://gen-efi-app.readthedocs.io/en/latest/?badge=latest
 
 .. toctree::
    :maxdepth: 4
@@ -33,48 +36,33 @@ other information that should be provided before the modules are installed.
 Installation
 -------------
 
-|install python2 package| |install python3 package|
+|gen_efi_app python3 build|
 
-.. |install python2 package| image:: https://img.shields.io/github/workflow/status/electux/gen_efi_app/gen_efi_app_python2_build?style=flat&label=gen_efi_app%20python2%20build
-   :target: https://img.shields.io/github/workflow/status/electux/gen_efi_app/gen_efi_app_python2_build
+.. |gen_efi_app python3 build| image:: https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python3_build.yml/badge.svg
+   :target: https://github.com/electux/gen_efi_app/actions/workflows/gen_efi_app_python3_build.yml
 
-.. |install python3 package| image:: https://img.shields.io/github/workflow/status/electux/gen_efi_app/gen_efi_app_python3_build?style=flat&label=gen_efi_app%20python3%20build
-   :target: https://img.shields.io/github/workflow/status/electux/gen_efi_app/gen_efi_app_python3_build
-
-Navigate to release `page`_ download and extract release archive 📦.
+Navigate to release `page`_ download and extract release archive.
 
 .. _page: https://github.com/electux/gen_efi_app/releases
 
-To install **gen_efi_app** 📦 type the following
+To install **gen_efi_app** type the following
 
 .. code-block:: bash
 
     tar xvzf gen_efi_app-x.y.z.tar.gz
     cd gen_efi_app-x.y.z
-    #python2
-    pip install -r requirements.txt
-    python setup.py install_lib
-    python setup.py install_egg_info
-    python setup.py install_data
     #python3
     pip3 install -r requirements.txt
     python3 setup.py install_lib
     python3 setup.py install_egg_info
     python3 setup.py install_data
 
-You can use Docker to create image/container, or You can use pip to install 📦
+You can use Docker to create image/container, or You can use pip to install
 
 .. code-block:: bash
 
-    #python2
-    pip install gen_efi_app
     #python3
     pip3 install gen_efi_app
-
-|github docker checker|
-
-.. |github docker checker| image:: https://img.shields.io/github/workflow/status/electux/gen_efi_app/gen_efi_app_docker_checker?style=flat&label=gen_efi_app%20docker%20checker
-   :target: https://img.shields.io/github/workflow/status/electux/gen_efi_app/gen_efi_app_docker_checker
 
 Dependencies
 -------------
@@ -88,7 +76,7 @@ Tool structure
 
 **gen_efi_app** is based on OOP
 
-🧰 Code structure
+Code structure
 
 .. code-block:: bash
 
@@ -108,10 +96,6 @@ Tool structure
     ├── log/
     │   └── gen_efi_app.log
     ├── pro/
-    │   ├── config/
-    │   │   ├── __init__.py
-    │   │   ├── pro_name.py
-    │   │   └── template_dir.py
     │   ├── __init__.py
     │   ├── read_template.py
     │   └── write_template.py
@@ -129,13 +113,13 @@ Copyright and licence
 .. |license: apache 2.0| image:: https://img.shields.io/badge/License-Apache%202.0-blue.svg
    :target: https://opensource.org/licenses/Apache-2.0
 
-Copyright (C) 2020 by `electux.github.io/gen_efi_app <https://electux.github.io/gen_efi_app>`_
+Copyright (C) 2020 - 2024 - 2024 by `electux.github.io/gen_efi_app <https://electux.github.io/gen_efi_app>`_
 
 **gen_efi_app** is free software; you can redistribute it and/or modify
-it under the same terms as Python itself, either Python version 2.x/3.x or,
+it under the same terms as Python itself, either Python version 3.x or,
 at your option, any later version of Python 3 you may have available.
 
-🌎 🌍 🌏 Lets help and support PSF.
+Lets help and support PSF.
 
 |python software foundation|
 
@@ -144,8 +128,8 @@ at your option, any later version of Python 3 you may have available.
 
 |donate|
 
-.. |donate| image:: https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif
-   :target: https://psfmember.org/index.php?q=civicrm/contribute/transact&reset=1&id=2
+.. |donate| image:: https://www.paypalobjects.com/en_us/i/btn/btn_donatecc_lg.gif
+   :target: https://www.python.org/psf/donations/
 
 Indices and tables
 ------------------
