@@ -40,7 +40,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2024, https://electux.github.io/gen_efi_app'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/electux/gen_efi_app/blob/dev/LICENSE'
-__version__ = '1.3.1'
+__version__ = '1.3.2'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -62,7 +62,7 @@ class WriteTemplate(FileCheck):
 
     _GEN_VERBOSE: str = 'GEN_EFI_APP::PRO::WRITE_TEMPLATE'
 
-    def __init__(self, verbose: bool = False):
+    def __init__(self, verbose: bool = False) -> None:
         '''
             Initial constructor.
 
@@ -104,19 +104,19 @@ class WriteTemplate(FileCheck):
         if not bool(pro_name):
             raise ATSValueError('missing project name')
         all_stat: List[bool] = []
-        pro_dir = f'{getcwd()}/{pro_name}/'
+        pro_dir: str = f'{getcwd()}/{pro_name}/'
         num_of_modules: int = len(templates)
         if not exists(pro_dir):
             mkdir(pro_dir)
         for template_content in templates:
-            module_name = list(template_content.keys())[0]
+            module_name: str = list(template_content.keys())[0]
             template = Template(template_content[module_name])
-            module_path = f'{pro_dir}{module_name}'
-            module_dict = {
+            module_path: str = f'{pro_dir}{module_name}'
+            module_dict: Dict[str, str] = {
                 'PRO': f'{pro_name}', 'YEAR': f'{date.today().year}'
             }
             with open(module_path, 'w', encoding='utf-8') as module_file:
-                module_content = template.substitute(module_dict)
+                module_content: str = template.substitute(module_dict)
                 module_file.write(module_content)
                 chmod(module_path, 0o666)
                 self.check_path(module_path, verbose)

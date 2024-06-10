@@ -42,7 +42,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2024, https://electux.github.io/gen_efi_app'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/electux/gen_efi_app/blob/dev/LICENSE'
-__version__ = '1.3.1'
+__version__ = '1.3.2'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -70,7 +70,7 @@ class GenEfi(FileCheck, ProConfig, ProName):
     _GEN_VERBOSE: str = 'GEN_EFI_APP::PRO::GEN_EFI'
     _PRO_STRUCTURE: str = '/../conf/project.yaml'
 
-    def __init__(self, verbose: bool = False):
+    def __init__(self, verbose: bool = False) -> None:
         '''
             Initial constructor.
 
@@ -113,7 +113,7 @@ class GenEfi(FileCheck, ProConfig, ProName):
         '''
         return self._writer
 
-    def gen_project(self, pro_name, verbose: bool = False):
+    def gen_project(self, pro_name: str, verbose: bool = False) -> bool:
         '''
             Generates EFI project structure.
 
