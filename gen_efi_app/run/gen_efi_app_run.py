@@ -33,11 +33,11 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2024, https://electux.github.io/gen_efi_app'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/electux/gen_efi_app/blob/dev/LICENSE'
-__version__ = '1.3.1'
+__version__ = '1.3.2'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
 
 if __name__ == '__main__':
-    TOOL = GenEfiApp(verbose=False)
+    TOOL: GenEfiApp = GenEfiApp(verbose=False)
     TOOL.process(verbose=False)

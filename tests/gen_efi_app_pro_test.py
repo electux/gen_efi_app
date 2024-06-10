@@ -38,7 +38,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2024, https://electux.github.io/gen_efi_app'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/electux/gen_efi_app/blob/dev/LICENSE'
-__version__ = '2.7.0'
+__version__ = '1.3.2'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -96,7 +96,7 @@ class GenEfiTestCase(TestCase):
         '''Create project with None name'''
         generator: GenEfi = GenEfi()
         with self.assertRaises(ATSTypeError):
-            generator.gen_project(None)
+            generator.gen_project(None)  # type: ignore
 
     def test_gen_project(self) -> None:
         '''Create project'''

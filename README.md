@@ -1,6 +1,6 @@
-<img align="right" src="https://github.com/electux/gen_efi_app/blob/dev/docs/gen_efi_app_logo.png" width="25%">
-
 # Create EFI application
+
+<img align="right" src="https://github.com/electux/gen_efi_app/blob/dev/docs/gen_efi_app_logo.png" width="25%">
 
 **gen_efi_app** is tool for creating EFI project skeleton.
 
@@ -149,7 +149,7 @@ More documentation and info at
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-Copyright (C) 2020 - 2024 - 2024 by [electux.github.io/gen_efi_app](https://electux.github.io/gen_efi_app/)
+Copyright (C) 2020 - 2024 by [electux.github.io/gen_efi_app](https://electux.github.io/gen_efi_app/)
 
 **gen_efi_app** is free software; you can redistribute it and/or modify
 it under the same terms as Python itself, either Python version 3.x or,
