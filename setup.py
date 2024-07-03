@@ -21,7 +21,7 @@ Info
 '''
 
 from __future__ import print_function
-from typing import List
+from typing import List, Optional
 from os.path import abspath, dirname, join
 from setuptools import setup
 
@@ -29,7 +29,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2024, https://electux.github.io/gen_efi_app'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/electux/gen_efi_app/blob/dev/LICENSE'
-__version__ = '1.3.2'
+__version__ = '1.3.3'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -39,7 +39,7 @@ CONF: str = 'conf'
 TEMPLATE: str = 'conf/template'
 LOG: str = 'log'
 THIS_DIR: str = abspath(dirname(__file__))
-long_description: str | None = None
+long_description: Optional[str] = None
 with open(join(THIS_DIR, 'README.md'), encoding='utf-8') as readme:
     long_description = readme.read()
 PROGRAMMING_LANG: str = 'Programming Language :: Python ::'
@@ -61,7 +61,7 @@ APPROVED_LICENSES: List[str] = [
 PYP_CLASSIFIERS: List[str] = SUPPORTED_PY_VERSIONS + APPROVED_LICENSES
 setup(
     name='gen_efi_app',
-    version='1.3.2',
+    version='1.3.3',
     description='EFI Application generator',
     author='Vladimir Roncevic',
     author_email='elektron.ronca@gmail.com',
