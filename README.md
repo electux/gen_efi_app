@@ -109,27 +109,31 @@ You can use Dockerfile to create image/container.
 Generator structure
 
 ```bash
-gen_efi_app/
-├── conf/
-│   ├── gen_efi_app.cfg
-│   ├── gen_efi_app_util.cfg
-│   ├── project.yaml
-│   └── template/
-│       ├── cflags.template
-│       ├── ldflags.template
-│       ├── main.template
-│       ├── makefile.template
-│       ├── objects.template
-│       └── ocflags.template
-├── __init__.py
-├── log/
-│   └── gen_efi_app.log
-├── pro/
-│   ├── __init__.py
-│   ├── read_template.py
-│   └── write_template.py
-└── run/
-    └── gen_efi_app_run.py
+    gen_efi_app/
+         ├── conf/
+         │   ├── gen_efi_app.cfg
+         │   ├── gen_efi_app.logo
+         │   ├── gen_efi_app_util.cfg
+         │   ├── project.yaml
+         │   └── template/
+         │       ├── cflags.template
+         │       ├── ldflags.template
+         │       ├── main.template
+         │       ├── makefile.template
+         │       ├── objects.template
+         │       └── ocflags.template
+         ├── __init__.py
+         ├── log/
+         │   └── gen_efi_app.log
+         ├── pro/
+         │   ├── __init__.py
+         │   ├── read_template.py
+         │   └── write_template.py
+         ├── py.typed
+         └── run/
+             └── gen_efi_app_run.py
+    
+    6 directories, 17 files
 ```
 
 ### Docs

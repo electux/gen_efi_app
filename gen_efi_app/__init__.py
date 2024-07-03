@@ -21,7 +21,7 @@ Info
 '''
 
 import sys
-from typing import Any, List, Dict
+from typing import List, Dict
 from os.path import exists, dirname, realpath
 from os import getcwd
 from argparse import Namespace
@@ -44,7 +44,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2024, https://electux.github.io/gen_efi_app'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/electux/gen_efi_app/blob/dev/LICENSE'
-__version__ = '1.3.2'
+__version__ = '1.3.3'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -83,7 +83,7 @@ class GenEfiApp(CfgCLI):
             :type verbose: <bool>
             :exceptions: None
         '''
-        current_dir = dirname(realpath(__file__))
+        current_dir: str = dirname(realpath(__file__))
         gen_efi_app_property: Dict[str, str | bool] = {
             'ats_organization': 'electux',
             'ats_repository': f'{self._GEN_VERBOSE.lower()}',
@@ -124,7 +124,7 @@ class GenEfiApp(CfgCLI):
         status: bool = False
         if self.tool_operational:
             try:
-                args: Any | Namespace = self.parse_args(sys.argv)
+                args: Namespace = self.parse_args(sys.argv)
                 if not bool(getattr(args, "name")):
                     error_message(
                         [f'{self._GEN_VERBOSE.lower()} missing name argument']
