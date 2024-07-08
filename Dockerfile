@@ -28,7 +28,11 @@ RUN DEBIAN_FRONTEND=noninteractive \
     openssl \
     python3 \
     python3-dev \
-    libyaml-dev
+    libyaml-dev \
+    build-essential \
+    uuid-dev \
+    iasl \
+    nasm
 
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python3 get-pip.py

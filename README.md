@@ -136,6 +136,16 @@ Generator structure
     6 directories, 17 files
 ```
 
+### Code coverage
+
+| Name | Stmts | Miss | Cover |
+|------|-------|------|-------|
+| `gen_efi_app/__init__.py` | 71 | 12 | 83% |
+| `gen_efi_app/pro/__init__.py` | 59 | 2 | 97% |
+| `gen_efi_app/pro/read_template.py` | 53 | 2 | 96% |
+| `gen_efi_app/pro/write_template.py` | 59 | 4 | 93% |
+| **Total** | 242 | 20 | 92% |
+
 ### Docs
 
 [![Documentation Status](https://readthedocs.org/projects/gen_efi_app/badge/?version=latest)](https://gen-efi-app.readthedocs.io/en/latest/?badge=latest)

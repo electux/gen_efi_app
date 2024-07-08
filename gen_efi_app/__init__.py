@@ -21,14 +21,14 @@ Info
 '''
 
 import sys
-from typing import List, Dict
+from typing import List, Dict, Optional
 from os.path import exists, dirname, realpath
 from os import getcwd
 from argparse import Namespace
 
 try:
     from ats_utilities.splash import Splash
-    from ats_utilities.cli.cfg_cli import CfgCLI
+    from ats_utilities.cli import ATSCli
     from ats_utilities.logging import ATSLogger
     from ats_utilities.console_io.error import error_message
     from ats_utilities.console_io.verbose import verbose_message
@@ -44,13 +44,13 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = '(C) 2024, https://electux.github.io/gen_efi_app'
 __credits__: List[str] = ['Vladimir Roncevic', 'Python Software Foundation']
 __license__ = 'https://github.com/electux/gen_efi_app/blob/dev/LICENSE'
-__version__ = '1.3.3'
+__version__ = '1.3.4'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
 
 
-class GenEfiApp(CfgCLI):
+class GenEfiApp(ATSCli):
     '''
         Defines class GenEfiApp with attribute(s) and method(s).
         Loads a base info, creates a CLI interface and runs operations.
@@ -98,9 +98,9 @@ class GenEfiApp(CfgCLI):
             verbose, [f'{self._GEN_VERBOSE.lower()} init tool info']
         )
         self._logger: ATSLogger = ATSLogger(
-            self._GEN_VERBOSE.lower(), f'{current_dir}{self._LOG}', verbose
+            self._GEN_VERBOSE.lower(), True, None, True, verbose
         )
-        if self.tool_operational:
+        if self.is_operational():
             self.add_new_option(
                 self._OPS[0], self._OPS[1], dest='name',
                 help='generate project (provide name)'
@@ -122,10 +122,10 @@ class GenEfiApp(CfgCLI):
             :exceptions: None
         '''
         status: bool = False
-        if self.tool_operational:
+        if self.is_operational():
             try:
-                args: Namespace = self.parse_args(sys.argv)
-                if not bool(getattr(args, "name")):
+                args: Optional[Namespace] = self.parse_args(sys.argv)
+                if not bool(getattr(args, 'name')):
                     error_message(
                         [f'{self._GEN_VERBOSE.lower()} missing name argument']
                     )
@@ -165,7 +165,7 @@ class GenEfiApp(CfgCLI):
                     )
             except SystemExit:
                 error_message(
-                    [f'{self._GEN_VERBOSE.lower()} expected argument -n']
+                    [f'{self._GEN_VERBOSE.lower()} expected argument name']
                 )
                 return status
         else:
