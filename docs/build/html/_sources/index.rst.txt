@@ -117,7 +117,7 @@ Copyright and licence
 .. |license: apache 2.0| image:: https://img.shields.io/badge/License-Apache%202.0-blue.svg
    :target: https://opensource.org/licenses/Apache-2.0
 
-Copyright (C) 2020 - 2024 by `electux.github.io/gen_efi_app <https://electux.github.io/gen_efi_app>`_
+Copyright (C) 2020 - 2026 by `electux.github.io/gen_efi_app <https://electux.github.io/gen_efi_app>`_
 
 **gen_efi_app** is free software; you can redistribute it and/or modify
 it under the same terms as Python itself, either Python version 3.x or,
