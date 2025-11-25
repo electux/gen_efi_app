@@ -1,6 +1,6 @@
 # Create EFI application
 
-<img align="right" src="https://github.com/electux/gen_efi_app/blob/dev/docs/gen_efi_app_logo.png" width="25%">
+<img align="right" src="https://raw.githubusercontent.com/electux/gen_efi_app/dev/docs/gen_efi_app_logo.png" width="25%">
 
 **gen_efi_app** is tool for creating EFI project skeleton.
 
