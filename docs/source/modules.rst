@@ -5,3 +5,4 @@ gen_efi_app
    :maxdepth: 4
 
    gen_efi_app
+   main
