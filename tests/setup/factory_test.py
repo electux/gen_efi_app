@@ -32,4 +32,4 @@ class TestGenEfiAppBundleFactory(unittest.TestCase):
             GenEfiAppBundleFactory.create_bundle(options)
 
     def test_get_version(self) -> None:
-        self.assertEqual(GenEfiAppBundleFactory.get_version(), '1.3.7')
+        self.assertEqual(GenEfiAppBundleFactory.get_version(), '1.3.8')

@@ -69,4 +69,4 @@ class TestGenEfiAppBundleRegistry(unittest.TestCase):
             GenEfiAppBundleRegistry.create_bundle(None)
 
     def test_get_version(self) -> None:
-        self.assertEqual(GenEfiAppBundleRegistry.get_version(), '1.3.7')
+        self.assertEqual(GenEfiAppBundleRegistry.get_version(), '1.3.8')
