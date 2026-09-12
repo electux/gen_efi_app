@@ -29,7 +29,7 @@ path.insert(0, abspath('../../'))
 project: str = 'gen_efi_app'
 project_copyright: str = '2026, Vladimir Roncevic <elektron.ronca@gmail.com>'
 author: str = 'Vladimir Roncevic <elektron.ronca@gmail.com>'
-version: str = '1.3.7'
+version: str = '1.3.8'
 release: str = 'https://github.com/electux/gen_efi_app/releases'
 extensions: list[str] = ['sphinx.ext.autodoc', 'sphinx.ext.viewcode']
 templates_path: list[str] = ['_templates']
